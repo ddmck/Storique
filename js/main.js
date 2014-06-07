@@ -8,8 +8,9 @@ $(document).ready(function(){
 		if (image_name === "__.jpeg") {
 			image_name = "default.jpeg";
 		};
+
 		$(".imageChoice").attr("src","img/" + image_name).fadeOut("fast").fadeIn("slower");
-			
+
 	}
 	var choiceUpdater = function(selector,choice){
 		$(selector).html(choice);
