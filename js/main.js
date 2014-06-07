@@ -5,10 +5,10 @@ $(document).ready(function(){
 		var house = $(".houseChoice").html();
 		var hair = $(".hairChoice").html();
 		var image_name = weather+"_"+house+"_"+hair+".jpeg";
-		if (1 == "one") {
-			image_name = "default.jpg";
+		if (image_name === "__.jpeg") {
+			image_name = "default.jpeg";
 		};
-		$(".imageChoice").html(image_name);
+		$(".imageChoice").attr("scr","/img/" + image_name);
 		
 			
 	}
