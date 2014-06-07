@@ -2,44 +2,46 @@ $(document).ready(function(){
 
 	var imageSelection = function(){
 		var weather = $(".weatherChoice").html();
-		var house = "";
-		var hair = "";
-		var image_name = weather+house+hair+".jpeg";
-		alert(image_name);
+		var house = $(".houseChoice").html();
+		var hair = $(".hairChoice").html();
+		var image_name = weather+"_"+house+"_"+hair+".jpeg";
+		if (1 == "one") {
+			image_name = "default.jpg";
+		};
+		$(".imageChoice").html(image_name);
 		
+			
 	}
+	var choiceUpdater = function(selector,choice){
+		$(selector).html(choice);
+		imageSelection();
+	}
+		
 	imageSelection();
 	
+	
 	$("#chooseSunny").on("click",function(){
-		$(".weatherChoice").html("sunny");
-		imageSelection();
-		
+		choiceUpdater(".weatherChoice","sunny");
 	});
 	
 	$("#chooseCloudy").on("click",function(){
-		$(".weatherChoice").html("cloudy");
-		imageSelection();
-	
+		choiceUpdater(".weatherChoice","cloudy");
 	});
 	
 	$(".chooseStone").on("click",function(){
-		$(".houseChoice").html("stone");
-		
+		choiceUpdater(".houseChoice","stone");
 	});
 	
 	$(".chooseWood").on("click",function(){
-		$(".houseChoice").html("wooden");
-		
+		choiceUpdater(".houseChoice","wooden");
 	});
 	
 	$(".chooseRed").on("click",function(){
-		$(".hairChoice").html("red");
-		
+		choiceUpdater(".hairChoice","red");
 	});
 	
 	$(".chooseGreen").on("click",function(){
-		$(".hairChoice").html("green");
-		
+		choiceUpdater(".hairChoice","green");
 	});
 	
 	
