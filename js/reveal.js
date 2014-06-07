@@ -96,7 +96,7 @@ var Reveal = (function(){
 			transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 			// Transition speed
-			transitionSpeed: 'slow', // default/fast/slow
+			transitionSpeed: 'default', // default/fast/slow
 
 			// Transition style for full page slide backgrounds
 			backgroundTransition: 'default', // default/linear/none

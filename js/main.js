@@ -8,7 +8,7 @@ $(document).ready(function(){
 		if (image_name === "__.jpeg") {
 			image_name = "default.jpeg";
 		};
-		$(".imageChoice").attr("src","/img/" + image_name);
+		$(".imageChoice").attr("src","img/" + image_name);
 			
 	}
 	var choiceUpdater = function(selector,choice){
