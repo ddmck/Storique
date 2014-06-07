@@ -9,8 +9,10 @@ $(document).ready(function(){
 			image_name = "default.jpeg";
 		};
 
-		$(".imageChoice").attr("src","img/" + image_name).fadeOut("fast").fadeIn("slower");
-
+		$(".imageChoice").fadeOut('slow',function(){
+			$(this).html("<img src='img/" + image_name + "' height='200' width='200'>").fadeIn('slow')
+		})
+		
 	}
 	var choiceUpdater = function(selector,choice){
 		$(selector).html(choice);
@@ -18,8 +20,7 @@ $(document).ready(function(){
 	}
 		
 	imageSelection();
-	
-	
+
 	$("#chooseSunny").on("click",function(){
 		choiceUpdater(".weatherChoice","sunny");
 	});
