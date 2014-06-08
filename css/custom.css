@@ -26,6 +26,21 @@ th, td {
 	font-size: 27px !important;
 }
 
+table {
+	border: 2px solid #000 !important;
+	border-radius: 35px;
+	border-collapse: collapse;
+}
+
+table tbody tr td, table thead tr th  {
+	padding: 15px !important;
+	border-left: 2px solid #000 !important;
+}
+
+table thead tr th  {
+	border-bottom: 2px solid #000 !important;
+}
+
 a.choice-button, a.choice-button:hover {
 	margin: 20px 10px !important;
 	padding: 5px 15px !important;
