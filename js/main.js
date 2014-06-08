@@ -1,5 +1,7 @@
 $(document).ready(function(){
-
+	$(".weatherImage").fadeOut()
+	$(".millImage").fadeOut()
+	$(".girlImage").fadeOut()
 	var imageSelection = function(){
 		var weather = $(".weatherChoice").html();
 		var house = $(".houseChoice").html();
@@ -23,29 +25,54 @@ $(document).ready(function(){
 
 	$("#chooseSunny").on("click",function(){
 		choiceUpdater(".weatherChoice","sunny");
-		$(".weatherImage").fadeOut('default', function(){
-			$(this).attr("src","img/normal_weather.jpg").fadeIn()
+		$(".weatherImage").fadeTo('default', .5, function(){
+			$(this).attr("src","img/sunny_weather.jpg").fadeTo('slow', 1)
 		});
 	});
 	
 	$("#chooseCloudy").on("click",function(){
 		choiceUpdater(".weatherChoice","cloudy");
+		$(".weatherImage").fadeTo('default', .5, function(){
+			$(this).attr("src","img/cloudy_weather.jpg").fadeTo('slow', 1)
+		});
+		
 	});
 	
-	$(".chooseStone").on("click",function(){
-		choiceUpdater(".houseChoice","stone");
+	$(".chooseOld").on("click",function(){
+		choiceUpdater(".houseChoice","old");
+		$(".millImage").fadeTo('default', .5, function(){
+			$(this).attr("src","img/old_mill.png").fadeTo('slow', 1)
+		});
+		
 	});
 	
-	$(".chooseWood").on("click",function(){
-		choiceUpdater(".houseChoice","wooden");
+	$(".chooseNew").on("click",function(){
+		
+		choiceUpdater(".houseChoice","new");
+		$(".millImage").fadeTo('default', .5, function(){
+			$(this).attr("src","img/new_mill.png").fadeTo('slow', 1)
+		});
+		
 	});
 	
 	$(".chooseRed").on("click",function(){
-		choiceUpdater(".hairChoice","red");
+		choiceUpdater(".dressChoice","red");
+			$(".girlImage").fadeTo('default', .5, function(){
+			$(this).attr("src","img/red_dress.png").fadeTo('slow', 1)
+		});
+		
 	});
 	
-	$(".chooseGreen").on("click",function(){
-		choiceUpdater(".hairChoice","green");
+	
+	
+	$(".chooseBlue").on("click",function(){
+		choiceUpdater(".dressChoice","blue");
+			$(".girlImage").fadeTo('default', .5, function(){
+			$(this).attr("src","img/blue_dress.png").fadeTo('slow', 1)
+		});
+		
+	
+	
 	});
 	
 	
