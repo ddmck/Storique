@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var imageSelection = function(){
 		var weather = $(".weatherChoice").html();
 		var house = $(".houseChoice").html();
-		var hair = $(".hairChoice").html();
+		var hair = $(".dressChoice").html();
 		var image_name = weather+"_"+house+"_"+hair+".jpeg";
 		if (image_name === "__.jpeg") {
 			image_name = "default.jpeg";
@@ -67,14 +67,29 @@ $(document).ready(function(){
 	
 	$(".chooseBlue").on("click",function(){
 		choiceUpdater(".dressChoice","blue");
-			$(".girlImage").fadeTo('default', .5, function(){
+		$(".girlImage").fadeTo('default', .5, function(){
 			$(this).attr("src","img/blue_dress.png").fadeTo('slow', 1)
 		});
-		
-	
-	
 	});
 	
+  $(".answerRed").on("click",function(){
+    if ($(".dressChoice").html() == "red") {
+      $('p.correct').html("Yay! You win!");
+    } else {
+      $('p.correct').html("Nope! Try again");
+    }
+  });
+  
+  
+  
+  $(".answerBlue").on("click",function(){
+    
+    if ($(".dressChoice").html() == "blue") {
+      $('p.correct').html("Yay! You win!");
+    } else {
+      $('p.correct').html("Nope! Try again");
+    }
+  });
 	
 });
 
