@@ -39,7 +39,7 @@ $(document).ready(function(){
 	});
 	
 	$(".chooseOld").on("click",function(){
-		choiceUpdater(".houseChoice","old");
+		choiceUpdater(".houseChoice","an old");
 		$(".millImage").fadeTo('default', .5, function(){
 			$(this).attr("src","img/old_mill.png").fadeTo('slow', 1)
 		});
@@ -48,7 +48,7 @@ $(document).ready(function(){
 	
 	$(".chooseNew").on("click",function(){
 		
-		choiceUpdater(".houseChoice","new");
+		choiceUpdater(".houseChoice","a new");
 		$(".millImage").fadeTo('default', .5, function(){
 			$(this).attr("src","img/new_mill.png").fadeTo('slow', 1)
 		});
