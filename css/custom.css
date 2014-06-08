@@ -1,3 +1,9 @@
+@font-face
+{
+font-family: head-over-heart;
+src: url(../fonts/head-versus-heart.ttf);
+}
+
 section.present img.logo {
 	background: none;
 	border: none;
@@ -10,6 +16,10 @@ section.present ul li {
 
 h1, h2, h3, h4, h5, h6, p, a, li, th, td {
 	color: #000 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: head-over-heart !important;
 }
 
 th, td {
@@ -28,7 +38,10 @@ div.frame {
 	-moz-transition: all 0s linear;
 	-ms-transition: all 0s linear;
 	-o-transition: all 0s linear;
-	transition: all 0s linear; 
+	transition: all 0s linear;
+	-moz-box-shadow: 5px 5px 2px #777;
+	-webkit-box-shadow: 5px 5px 2px #777;
+	box-shadow: 5px 5px 2px #777; 
 }
 
 section.present div.frame img.weatherImage {
