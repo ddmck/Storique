@@ -23,6 +23,9 @@ $(document).ready(function(){
 
 	$("#chooseSunny").on("click",function(){
 		choiceUpdater(".weatherChoice","sunny");
+		$(".weatherImage").fadeOut('default', function(){
+			$(this).attr("src","img/normal_weather.jpg").fadeIn()
+		});
 	});
 	
 	$("#chooseCloudy").on("click",function(){
