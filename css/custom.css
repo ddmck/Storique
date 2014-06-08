@@ -17,13 +17,18 @@ th, td {
 }
 
 div.frame {
-	height: 400px;
-	width: 600px;
+	height: 500px;
+	width: 750px;
 	border: 1px solid #fefefe;
 	margin: 40px auto;
 	background-image: url('../img/default.jpg');
 	background-size: contain;
 	position: relative;
+	-webkit-transition: all 0s linear;
+	-moz-transition: all 0s linear;
+	-ms-transition: all 0s linear;
+	-o-transition: all 0s linear;
+	transition: all 0s linear; 
 }
 
 section.present div.frame img.weatherImage {
