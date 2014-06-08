@@ -26,6 +26,18 @@ th, td {
 	font-size: 27px !important;
 }
 
+a.choice-button, a.choice-button:hover {
+	margin: 20px 10px !important;
+	padding: 5px 15px !important;
+	border: 3px solid #000 !important; 
+	border-radius: 35px !important;
+	font-size: 24px !important;
+}
+
+a.choice-button:hover {
+	background: rgba(0,0,0,0.25);
+}
+
 div.frame {
 	height: 500px;
 	width: 750px;
